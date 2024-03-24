@@ -68,6 +68,11 @@
     font-size: 1.2rem;
 }
 
+.task-completed{
+    text-decoration:line-through;
+    color: rgb(116, 116, 116);
+}
+
 .task-icons{
     font-size: 1.3rem;
     display: flex;

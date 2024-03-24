@@ -54,7 +54,7 @@ export const TodoList = () => {
                     todos.map((todos, i) => {
                         return (
                             <div key={i} className="task-todo">
-                                <div className="task-text">
+                                <div className={"task-text " + (todos.completed ? "task-completed" : " ")}>
                                     <p>{todos.task}</p>
                                 </div>
                                 <div className="task-icons">
