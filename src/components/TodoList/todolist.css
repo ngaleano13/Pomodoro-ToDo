@@ -1,0 +1,117 @@
+.form-container{
+    background-color: rgba(121, 121, 121, 0.527);
+    padding: 1rem;
+    min-width: 320px;
+    width: min(500px, 80%);
+    height: 600px;
+    overflow: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.title-todo{
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 80%;
+}
+
+.input-form{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 10px 100px 10px 20px; 
+    outline: none;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.btn-form{
+    cursor: pointer;
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: #000000;
+    color: #fff;
+    outline: none;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 100px;
+    z-index: 2;
+}
+
+.task-todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 1rem auto;
+    padding: 0.1rem 0.8rem;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.task-text{
+    width: 85%;
+    overflow-wrap: break-word;
+    margin: auto;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.task-icons{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* MediaQuery font */
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #949494;
+  border: 0px none #ffffff;
+  border-radius: 11px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c5c5c;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #8f8f8f;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 14px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
