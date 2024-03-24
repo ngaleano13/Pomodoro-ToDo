@@ -4,14 +4,22 @@ import './pomodoro.css'
 
 export const Pomodoro = () => {
 
-    var sound = new Howl({
+    var soundBreak = new Howl({
         src: ['bell.webm'],
+        volume: 0.4,
+      });
+
+    var soundWork = new Howl({
+        src: ['bellwork.webm'],
         volume: 0.4,
       });
 
     const [start, setStart] = useState(false)
     const [min, setMin] = useState(25)
     const [sec, setSec] = useState(0)
+    const [finish, setFinish] = useState(false)
+    const [workInterval, setWorkInterval] = useState(0)
+    const [breakInterval, setBreakInterval] = useState(0)
 
     useEffect(() => {
         if (start) {
@@ -24,19 +32,33 @@ export const Pomodoro = () => {
                     setSec(59)
                 }
                 if (min === 0 && sec === 0) {
-                    setStart(false)
+                    setMin(0);
+                    setSec(0);
+                    if (!finish) {
+                        soundBreak.play();
+                        setMin(5);
+                        setFinish(true);
+                        setWorkInterval((workInterval) => workInterval + 1)
+                    }
+                    if (finish) {
+                        soundWork.play();
+                        setMin(25);
+                        setFinish(false);
+                        setBreakInterval((breakInterval) => breakInterval + 1)
+                    }
+                    
+
                 }
             }, 1000)
             return () => clearInterval(intervalTimer)
         }
-    }, [start, min, sec])
+    }, [start, min, sec, workInterval, breakInterval])
 
     const startPomodoro = () => {
         setStart(true)
     }
     const pausePomodoro = () => {
         setStart(false)
-        sound.play();
     }
     const resetPomodoro = () => {
         setStart(false)
@@ -50,6 +72,10 @@ export const Pomodoro = () => {
             <div className="pomodoro">
                 <div>
                     <p className='text-clock'>{min}:{sec < 10 ? "0" + sec : sec}</p>
+                </div>
+                <div>
+                    <p className='interval-clock'>{workInterval} Intervalos de trabajo</p>
+                    <p className='interval-clock'>{breakInterval} Intervalos de descanso</p>
                 </div>
                 <div className='btn-clock'>
                     <button onClick={startPomodoro} className='fa-solid fa-play'></button>

@@ -23,6 +23,11 @@
     font-size: 7rem;
 }
 
+.interval-clock{
+    font-size: 1.3rem;
+    color: white;
+}
+
 .btn-clock{
     display: flex;
     justify-content: center;
