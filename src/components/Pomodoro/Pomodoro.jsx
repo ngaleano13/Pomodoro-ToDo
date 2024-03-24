@@ -6,7 +6,7 @@ export const Pomodoro = () => {
 
     var sound = new Howl({
         src: ['bell.webm'],
-        volume: 0.5,
+        volume: 0.4,
       });
 
     const [start, setStart] = useState(false)
