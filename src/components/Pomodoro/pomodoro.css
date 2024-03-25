@@ -33,7 +33,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    cursor: pointer;
 }
 
 .btn-clock > button{
@@ -43,6 +42,7 @@
     border: 0;
     background-color: rgb(207, 207, 207);
     font-size: 1.8rem;
+    cursor: pointer;
 }
 
 /* MediaQuery */
