@@ -1,5 +1,5 @@
 .form-container{
-    background-color: rgba(121, 121, 121, 0.527);
+    background-color: rgba(121, 121, 121, 0.164);
     padding: 1rem;
     min-width: 320px;
     width: min(500px, 80%);
@@ -48,16 +48,24 @@
     z-index: 2;
 }
 
+.btn-form:hover{
+    background: #414141;
+}
+
 .task-todo{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #ffffffe3;
     margin: 1rem auto;
     padding: 0.1rem 0.8rem;
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
+}
+
+.task-todo:hover{
+  background-color: #ffffff;
 }
 
 .task-text{

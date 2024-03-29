@@ -1,5 +1,5 @@
 .pomodoro{
-    background-color: rgba(121, 121, 121, 0.527);
+    background-color: rgba(121, 121, 121, 0.164);
     padding: 1rem;
     min-width: 320px;
     width: min(500px, 80%);
@@ -40,9 +40,14 @@
     width: 5rem;
     border-radius: 50%;
     border: 0;
-    background-color: rgb(207, 207, 207);
+    background-color: rgba(255, 255, 255, 0.747);
     font-size: 1.8rem;
     cursor: pointer;
 }
+
+.btn-clock > button:hover{
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
 
 /* MediaQuery */
